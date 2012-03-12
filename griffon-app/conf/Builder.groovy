@@ -4,4 +4,7 @@ root {
         view = '*'
     }
 }
-root.'MiglayoutGriffonAddon'.addon=true
+
+
+
+root.'SyntaxtextGriffonAddon'.addon=true

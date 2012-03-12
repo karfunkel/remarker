@@ -6,6 +6,9 @@ class RemarkerModel {
     @Bindable String source
     @Bindable String target
     @Bindable String htmlTarget
+    @Bindable String errors
+
+    @Bindable boolean options = false
 
     @Bindable boolean hardwraps = true
     @Bindable boolean autoLinks = true
@@ -25,7 +28,6 @@ class RemarkerModel {
     @Bindable boolean fragment = true
     @Bindable boolean html
     @Bindable boolean url
-    @Bindable boolean file
 
     @Bindable boolean tables_codeblock
     @Bindable boolean tables_remove
@@ -38,4 +40,10 @@ class RemarkerModel {
     @Bindable boolean emphasis_remove = true
     @Bindable boolean emphasis_spaces
 
+    @Bindable String find
+    @Bindable String replace
+    @Bindable boolean caseSensitive
+    @Bindable boolean backwards
+    @Bindable boolean regexp
+    @Bindable boolean wholeWord
 }
