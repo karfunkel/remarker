@@ -125,11 +125,9 @@ application(title: 'remarker',
                     label('Markdown')
                     button('Load', actionPerformed: controller.&loadMarkdown, constraints: 'right')
                     button('Save', actionPerformed: controller.&saveMarkdown, constraints: 'right, wrap')
-                    scrollPane(constraints: 'spanx 3') {
-                        rtextScrollPane(constraints: 'spanx 3') {
-                            rtextArea(id: 'target', text: bind(source: model, sourceProperty: 'target', mutual: true)) {
-                                keyStrokeAction(action: action(closure: controller.&openFind), keyStroke: 'ctrl F')
-                            }
+                    rtextScrollPane(constraints: 'spanx 3') {
+                        rtextArea(id: 'target', text: bind(source: model, sourceProperty: 'target', mutual: true)) {
+                            keyStrokeAction(action: action(closure: controller.&openFind), keyStroke: 'ctrl F')
                         }
                     }
                     bind(source: model, sourceProperty: 'target', target: model, targetProperty: 'htmlTarget', converter: { controller.pegDown(it) })
